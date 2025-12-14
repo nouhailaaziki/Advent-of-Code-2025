@@ -1,3 +1,7 @@
+import sys
+import os
+
+
 def is_invalid_id(n):
     s = str(n)
     l = len(s)
@@ -5,6 +9,7 @@ def is_invalid_id(n):
         return False
     half = l // 2
     return s[:half] == s[half:]
+
 
 def sum_invalid_ids(ranges_line):
     total = 0
@@ -18,6 +23,23 @@ def sum_invalid_ids(ranges_line):
                 total += n
     return total
 
-input_ranges = "9100-11052,895949-1034027,4408053-4520964,530773-628469,4677-6133,2204535-2244247,55-75,77-96,6855-8537,55102372-55256189,282-399,228723-269241,5874512-6044824,288158-371813,719-924,1-13,496-645,8989806846-8989985017,39376-48796,1581-1964,699387-735189,85832568-85919290,6758902779-6759025318,198-254,1357490-1400527,93895907-94024162,21-34,81399-109054,110780-153182,1452135-1601808,422024-470134,374195-402045,58702-79922,1002-1437,742477-817193,879818128-879948512,407-480,168586-222531,116-152,35-54"
 
-print sum_invalid_ids(input_ranges)
+def main():
+    if len(sys.argv) > 1:
+        path = sys.argv[1]
+    else:
+        path = os.path.join(os.path.dirname(__file__), 'puzzle_input')
+
+    try:
+        with open(path, 'r') as f:
+            input_ranges = f.read().strip()
+    except Exception as e:
+        sys.stderr.write("Error reading input file {}: {}\n".format(path, e))
+        sys.exit(1)
+
+    print(sum_invalid_ids(input_ranges))
+
+
+if __name__ == '__main__':
+    main()
+
