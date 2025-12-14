@@ -6,12 +6,11 @@ A curated and well-documented collection of solutions for Advent of Code 2025 (D
 - [About](#about)
 - [Repository layout](#repository-layout)
 - [Languages & requirements](#languages--requirements)
-- [How to run](#how-to-run)
-- [Coding conventions](#coding-conventions)
 - [Testing & inputs](#testing--inputs)
 - [Contributing](#contributing)
 - [License & attribution](#license--attribution)
 - [Author](#author)
+- [Achievement](#achievement)
 
 ## About
 This repository documents my Advent of Code 2025 solutions, including both Part 1 and Part 2 for each day. Each solution focuses on readability and explaining the approach used. The goal is to serve both as a personal record and a learning resource for others.
@@ -82,3 +81,6 @@ This repository is provided for educational purposes. Puzzle prompts are copyrig
 ## Author
 - Nouhaila Aziki — solutions, documentation, and maintenance  
 - Advent of Code: https://adventofcode.com
+
+## Achievement
+![Achievement picture](achievement.png)
